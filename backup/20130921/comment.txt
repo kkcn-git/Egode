@@ -1,0 +1,1 @@
+把OrderDetailsControls切换到html显示. 删除老的显示代码前备份. 此备份代码, 将webbrowser.visible=false即可显示老界面.

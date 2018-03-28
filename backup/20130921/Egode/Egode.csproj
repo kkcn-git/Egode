@@ -1,0 +1,353 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91990129-2952-4E08-AA64-9633996E96C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Egode</RootNamespace>
+    <AssemblyName>Egode</AssemblyName>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.4.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\software\itextsharp-all-5.4.1\itextsharp-dll-core\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SgmlReaderDll, Version=1.7.3464.40156, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DHL\DHL\bin\Debug\SgmlReaderDll.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressParser.cs" />
+    <Compile Include="BuyerInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BuyerInfoControl.Designer.cs">
+      <DependentUpon>BuyerInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockStatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockStatForm.Designer.cs">
+      <DependentUpon>StockStatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebBrowserForms\AutoSigninWebBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebBrowserForms\AutoSigninWebBrowserForm.Designer.cs">
+      <DependentUpon>AutoSigninWebBrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebBrowserForms\ConsignShWebBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebBrowserForms\ConsignShWebBrowserForm.Designer.cs">
+      <DependentUpon>ConsignShWebBrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintExpressBill.cs" />
+    <Compile Include="ConsignShForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsignShForm.Designer.cs">
+      <DependentUpon>ConsignShForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductInfo.cs" />
+    <Compile Include="WebBrowserForms\RateBuyerWebBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebBrowserForms\RateBuyerWebBrowserForm.Designer.cs">
+      <DependentUpon>RateBuyerWebBrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RateForm.Designer.cs">
+      <DependentUpon>RateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsignForm.Designer.cs">
+      <DependentUpon>ConsignForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClipboardPromptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClipboardPromptForm.Designer.cs">
+      <DependentUpon>ClipboardPromptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelayForm.Designer.cs">
+      <DependentUpon>DelayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PromptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PromptForm.Designer.cs">
+      <DependentUpon>PromptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Excel.cs" />
+    <Compile Include="WebBrowserForms\OrderDetailsPageWebBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebBrowserForms\OrderDetailsPageWebBrowserForm.designer.cs">
+      <DependentUpon>OrderDetailsPageWebBrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HanziToPinyin.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderDetailsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderDetailsControl.Designer.cs">
+      <DependentUpon>OrderDetailsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderIdControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderIdControl.Designer.cs">
+      <DependentUpon>OrderIdControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderMoneyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderMoneyControl.Designer.cs">
+      <DependentUpon>OrderMoneyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packet.cs" />
+    <Compile Include="PacketDetailsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PacketDetailsControl.Designer.cs">
+      <DependentUpon>PacketDetailsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PacketInfo.cs" />
+    <Compile Include="PacketResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PacketResultForm.Designer.cs">
+      <DependentUpon>PacketResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PacketsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PacketsForm.Designer.cs">
+      <DependentUpon>PacketsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PdfMatchResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PdfMatchResultForm.Designer.cs">
+      <DependentUpon>PdfMatchResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PdfPacketInfo.cs" />
+    <Compile Include="PdfParser.cs" />
+    <Compile Include="ProductListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductListControl.Designer.cs">
+      <DependentUpon>ProductListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BuyerInfoControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BuyerInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsignShForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConsignShForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RateForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsignForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConsignForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClipboardPromptForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClipboardPromptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelayForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DelayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromptForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PromptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockStatForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StockStatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebBrowserForms\OrderDetailsPageWebBrowserForm.resx">
+      <DependentUpon>OrderDetailsPageWebBrowserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetailsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OrderDetailsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderIdControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OrderIdControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderMoneyControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OrderMoneyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PacketDetailsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PacketDetailsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PacketResultForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PacketResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PacketsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PacketsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PdfMatchResultForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PdfMatchResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductListControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProductListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebBrowserForms\WebBrowserForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WebBrowserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="WebBrowserForms\WebBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebBrowserForms\WebBrowserForm.Designer.cs">
+      <DependentUpon>WebBrowserForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dhl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localdhl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\partialsent.png" />
+    <None Include="hanzipinyin.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
